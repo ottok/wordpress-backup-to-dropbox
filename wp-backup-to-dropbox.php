@@ -85,7 +85,7 @@ function wpb2d_style()
  */
 function backup_to_dropbox_admin_menu()
 {
-    $imgUrl = rtrim(WP_PLUGIN_URL, '/') . '/wordpress-backup-to-dropbox/Images/WordPressBackupToDropbox_16.png';
+    $imgUrl = plugin_dir_url(__FILE__) .'Images/WordPressBackupToDropbox_16.png';
 
     $text = __('WPB2D', 'wpbtd');
     add_menu_page($text, $text, 'activate_plugins', 'backup-to-dropbox', 'backup_to_dropbox_admin_menu_contents', $imgUrl, '80.0564');
